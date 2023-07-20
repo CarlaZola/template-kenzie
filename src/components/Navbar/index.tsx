@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import useMedia from "use-media";
 import { userData } from "@/utils/userData";
+import {BsSun} from "react-icons/bs"
 
 import {
   Navbar as NavbarWrapper,
@@ -14,6 +15,7 @@ import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container, Flex } from "@/styles/Global";
+import { ThemeContext } from "../../provider/ThemeProvider";
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -58,20 +60,24 @@ export const NavBar = (): JSX.Element => {
 };
 
 export const NavLinks = (): JSX.Element => {
+
+  const { setNewTheme, mode, theme } = useContext(ThemeContext)
+
   return (
     <NavbarLinks>
       <Button type="btLink" as="a" color="grey4" href={`#home`}>
         Home
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#projects`}>
-        Projects
+        Projetos
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#contact`}>
-        Contact
+        Contato
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
         Social Media
       </Button>
+     { mode.name.light.value === "dark" ? <BsSun style={{color: "#fff", cursor: "pointer"}} onClick={setNewTheme}/> : <BsSun style={{cursor: "pointer"}} onClick={setNewTheme}/>}
     </NavbarLinks>
   );
 };

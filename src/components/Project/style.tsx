@@ -43,6 +43,10 @@ export const ProjectTitle = styled(Text, {});
 
 export const Project = styled("article", {
   marginTop: "4rem",
+  padding: "2rem 1rem",
+  border: "2px solid var(--colors-brand1)",
+  borderRadius: "0.5rem",
+  backgroundColor: "var(--colors-grey1)", 
   [`&:first-child`]: {
     [`& ${ProjectTitle}:first-child`]: {
       position: "relative",
