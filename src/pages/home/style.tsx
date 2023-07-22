@@ -120,7 +120,7 @@ export const AboutMeArea = styled("section", {
   backgroundImage: `url(${dots})`,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "left top 11rem",
-  borderBottom: " 2px solid var(--colors-grey5)", 
+  borderBottom: " 2px solid var(--colors-brand1)", 
   "@tablet": {
     backgroundPosition: "right top 8rem",
     padding: "$sectionMobile 0",
