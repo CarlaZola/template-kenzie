@@ -113,6 +113,21 @@ export const ProjectsArea = styled("section", {
   },
 });
 
+
+export const AboutMeArea = styled("section", {
+  padding: "$section 0",
+  backgroundColor: "$grey0",
+  backgroundImage: `url(${dots})`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "left top 11rem",
+  borderBottom: " 2px solid var(--colors-grey5)", 
+  "@tablet": {
+    backgroundPosition: "right top 8rem",
+    padding: "$sectionMobile 0",
+  },
+ 
+});
+
 export const ProjectsAreaSocialMediaMessage = styled("div", {
   display: "flex",
   flexDirection: "column",

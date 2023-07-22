@@ -68,15 +68,18 @@ export const NavLinks = (): JSX.Element => {
       <Button type="btLink" as="a" color="grey4" href={`#home`}>
         Home
       </Button>
+      <Button type="btLink" as="a" color="grey4" href={`#quem-sou`}>
+        Quem sou
+      </Button>
       <Button type="btLink" as="a" color="grey4" href={`#projects`}>
         Projetos
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#contact`}>
         Contato
-      </Button>
+      </Button>   
       <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
         Social Media
-      </Button>
+      </Button>    
      { mode.name.light.value === "dark" ? <BsSun style={{color: "#fff", cursor: "pointer"}} onClick={setNewTheme}/> : <BsSun style={{cursor: "pointer"}} onClick={setNewTheme}/>}
     </NavbarLinks>
   );
