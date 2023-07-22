@@ -3,9 +3,10 @@ import { styled } from "@/styles/stitches.config";
 
 
 export const AboutMeContainer = styled("div", {
-    maxWidth: "90%",
+    maxWidth: "$container",
     padding: "0 1rem",
     display: "flex",
+    margin: " 0 auto",
     flexDirection:"column",
     gap: "$1",
 })
